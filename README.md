@@ -19,6 +19,7 @@ In This Portfolio I Use the Following Technology.
 - CSS 3
 - Bootstrap.
 - Tailwind CSS.
+- JavaScript.
 
 ## Back-End
 - JavaScript
