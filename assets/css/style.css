@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+:root {
+    --color-body: #b6cbce;
+    --color-heading: #eef3db;
+    --color-base: #86bb6a;
+    --color-base2: #022a30;
+    /* --color-base2: #d0dfe1; */
+    --color-brand: #e0f780;
+    --color-brand2: #deff58;
+    --sidbar-width: 240px;
+    --font-base: "Bai Jamjuree";
+}
+body
+{
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    font-family: var(--font-base),sans-serif; /* base font here "Bai Jamjuree" & backup fonr sans-serif */
+   
+}
+/* for special effects  */
+.special{    
+    font-size: 60px;
+    color: transparent; /* this line transparent for h1 */
+    -webkit-text-stroke: 1px #ffea00; /* this line most IMP */
+    background: url(../images/back.png);
+    -webkit-background-clip: text; /* this is line over lap in img IMP */
+    background-position: 0 0;
+    animation: back 20s linear infinite; /* for animation parpas */
+    margin-bottom: 4%; /* this is margin for btn and text */
+}
+@keyframes back{
+    100%{
+        background-position: 2000px;
+    }
+}
+h1,h2,h3,h4,h5,h6{
+    color: var(--color-heading);
+    font-weight: 600;
+
+}
+a{
+    text-decoration: none;
+    color: var(--color-brand);
+
+}
+img{
+    width: 100%;
+}
+.navbar{
+    background-color: var(--color-base);
+}
+/* Navbar section */
+.navbar .nav-link{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+
+}
+.navbar .nav-link:hover{
+    color:var(--color-brand)
+  
+}
+.nav-link:hover{
+    background-color: #2d575d;
+    /* border-radius: 20px; */
+}
+img{
+    height: 300px;
+    width: 500px;
+}
+.text-brand{
+    color: var(--color-brand);
+}
+.full-height{
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 88px;
+    padding-bottom: 80px;
+    border-bottom: 3px solid rgb(20, 146, 146,0.4);
+
+
+}
+@media(min-width:990px)
+{
+    .navbar{
+        min-height: 100vh;
+        width: var(--sidbar-width);
+        background: linear-gradient(rgba(3,63,71,0.8),rgba(3,63,72,0.8)), url(../images/sidebar-img.jpg);
+        background-size: cover;
+        background-position: cover;
+    }
+    #content-wrapper{
+        padding-left:var(--sidbar-width) ;
+    }     
+
+}
+.navbar-brand img:hover{
+    height: 290px;
+    width: 495px;
+}
+.btn{
+    padding:12px 25px;
+    font-weight: 600;
+}
+.btn-brand{
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+}
+.custom-link{
+    font-weight: 700;
+    position: relative;
+    padding-left: 30px;
+}
+.custom-link::after{
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+.custom-link:hover::after{
+    width: 100%;
+    color: #deff58;
+}
+
+
+
+ 
